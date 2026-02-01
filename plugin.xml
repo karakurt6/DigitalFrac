@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InstalledPlugins xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Plugin>
+    <Name>RefinementPlugin</Name>
+    <Description>unstructured grid refinement to represent fracture surface in simulation grid</Description>
+    <Contact>contact@company.info</Contact>
+    <PluginTypeName>DigitalFrac.RefinementPlugin, DigitalFrac, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</PluginTypeName>
+    <PluginUri>http://www.pluginuri.info/</PluginUri>
+    <PluginId>://DigitalFrac.RefinementPlugin/1.0.0.0</PluginId>
+    <Trust PublicKeyToken="">Default</Trust>
+    <ReleaseDate>2025-10-14</ReleaseDate>
+    <Author>AChupeev</Author>
+    <AppVersion>2021.1</AppVersion>
+    <Modules>
+      <Module TypeName="DigitalFrac.RefinementModule, DigitalFrac, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </Modules>
+    <Assemblies>
+      <Assembly Name="DigitalFrac, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </Assemblies>
+    <assemblyBinding />
+    <StartMode>Startup</StartMode>
+    <StartupAction>None</StartupAction>
+  </Plugin>
+</InstalledPlugins>

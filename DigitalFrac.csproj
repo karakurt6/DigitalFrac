@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemDefinitionGroup>
+    <Reference>
+      <Private>False</Private>
+    </Reference>
+  </ItemDefinitionGroup>
+  <PropertyGroup>
+    <!--ProjectType:Plugin-->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76A9C465-1D44-4B4A-8C72-D08FB84E4BED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigitalFrac</RootNamespace>
+    <AssemblyName>DigitalFrac</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Slb.Ocean.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.Configuration, Version=21.2.0.0, Culture=neutral, PublicKeyToken=d42cec326f61051f, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.Intersect, Version=21.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Petrel.Intersect.dll</HintPath>
+    </Reference>
+    <Reference Include="Slb.Ocean.Petrel.Modeling, Version=21.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Petrel.Modeling.dll</HintPath>
+    </Reference>
+    <Reference Include="Slb.Ocean.Petrel.Polygon, Version=21.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Petrel.Polygon.dll</HintPath>
+    </Reference>
+    <Reference Include="Slb.Ocean.Petrel.ReservoirEngineering, Version=21.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Petrel.ReservoirEngineering.dll</HintPath>
+    </Reference>
+    <Reference Include="Slb.Ocean.Petrel.UI.Controls, Version=21.2.0.0, Culture=neutral, PublicKeyToken=da9605198f529641, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.UI.Wpf.Controls, Version=21.2.0.0, Culture=neutral, PublicKeyToken=da9605198f529641, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Petrel.UI.Wpf.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Slb.Ocean.Petrel.Well, Version=21.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Petrel.Well.dll</HintPath>
+    </Reference>
+    <Reference Include="Slb.Ocean.Units, Version=1.0.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Units.dll</HintPath>
+    </Reference>
+    <Reference Include="Slb.Petrel.UI.WPF.Controls, Version=21.2.0.0, Culture=neutral, PublicKeyToken=da9605198f529641, processorArchitecture=AMD64" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="Slb.Ocean.Core">
+      <Name>Slb.Ocean.Core</Name>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\slb.ocean.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Slb.Ocean.Petrel">
+      <Name>Slb.Ocean.Petrel</Name>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\slb.ocean.petrel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Slb.Ocean.Basics">
+      <Name>Slb.Ocean.Basics</Name>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Basics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Slb.Ocean.Geometry">
+      <Name>Slb.Ocean.Geometry</Name>
+      <HintPath>C:\Program Files\Schlumberger\Petrel 2021\Public\Slb.Ocean.Geometry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FracOperation.cs" />
+    <Compile Include="FracOperationUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FracOperationUI.designer.cs">
+      <DependentUpon>FracOperationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FracOperationViewModel.cs" />
+    <Compile Include="Model\DrainageArea.cs" />
+    <Compile Include="Model\FracConnection.cs" />
+    <Compile Include="Model\GridProcessing.cs" />
+    <Compile Include="Model\FracFacet.cs" />
+    <Compile Include="Model\RefinementProcessing.cs" />
+    <Compile Include="Model\TrajectoryProcessing.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefinementModule.cs" />
+    <Compile Include="RefinementPlugin.cs" />
+    <Compile Include="RefinementWorkstep.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="View\InputCollection.cs" />
+    <Compile Include="View\OperationPresentation.xaml.cs">
+      <DependentUpon>OperationPresentation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserEdit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\OperationPresentation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FracOperationUI.resx">
+      <DependentUpon>FracOperationUI.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>del "$(ProjectDir)\plugin.xml"
+"%25Ocean2021Home%25\PluginPackager.exe" /g "$(TargetPath)" "$(ProjectDir)\plugin.xml" "%25OCEAN2021HOME_x64%25\petrel.exe"
+"%25Ocean2021Home%25\PluginPackager.exe" /m "$(ProjectDir)\plugin.xml" "%25OCEAN2021HOME_x64%25\petrel.exe" "$(TargetDir)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+		Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
